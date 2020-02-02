@@ -17,4 +17,3 @@ Author affiliation:
 §§Department of Anthropology, UIUC, Urbana IL, 61801, USA 
 
 
-SCRIPT 1: Rx_identifier
