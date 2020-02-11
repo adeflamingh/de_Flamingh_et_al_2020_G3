@@ -10,9 +10,9 @@
 args=(commandArgs(TRUE))
 PREFIX=as.character(args[1])
 
-idxstats<-read.table(paste(PREFIX,'.idxstats',sep=''),header=F,nrows=28,row.names=1) #lox.afr4 has 27 autosomal chr and chr X
-c1 <- c(as.numeric(idxstats[,1]))
-c2 <- c(as.numeric(idxstats[,2]))
+idxstats<-read.table(paste(PREFIX,'.idxstats',sep=''),header=F,nrows=28,row.names=1) #lox.afr4 has 27 autosomal chr and chr X, therefore nrows = 27 + 1 = 28 - modify this value according to the chr number of the taxon of interest
+c1 <- c(as.numeric(idxstats[,1])) #this column in the idxstats file indicates the number of reference reads
+c2 <- c(as.numeric(idxstats[,2])) #this column in the idxstats file indicates the number of mapped reads
 total_ref <- sum(c1)
 total_map <- sum(c2)
   
